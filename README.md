@@ -1,2 +1,2 @@
-# gtemp
-Raspberri Pi Fan controll via GPIO
+# Raspberri Pi Fan controll via GPIO
+
