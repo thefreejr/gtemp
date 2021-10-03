@@ -19,7 +19,6 @@ type pc struct {
 	GPIO_port string
   GPIO int
   Log_Path string
-  Log_File_Size int64
   Hysteresys float64
   Current_CPU_temp float64
   Fan_Enable bool
