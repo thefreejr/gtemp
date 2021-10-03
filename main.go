@@ -106,8 +106,8 @@ func getCPUTemp(path string) (t float64) {
 }
   func  fanControll(n int , command bool) {
     m := map[rpio.State]bool {
-      "Low": "false",
-      "High": "true",
+      Low: false,
+      High: true,
     }
     node.Fan_Enable = m[rpio.Pin(n).Read()]
     if command && node.Fan_Enable {
