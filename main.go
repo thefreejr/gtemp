@@ -105,7 +105,7 @@ func getCPUTemp(path string) (t float64) {
   return t
 }
   func  fanControll(n int , command bool) {
-    m := map[rpio.State]bool {
+    m := map[string]bool {
       "Low": false,
       "High": true,
     }
