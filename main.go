@@ -29,7 +29,7 @@ type pc struct {
 }
 var node pc = pc{}
 var cfgFile string = "gtemp.conf"
-err := rpio.Open()
+
 var pinStat bool = true
 
 
@@ -120,6 +120,7 @@ func getCPUTemp(path string) (t float64) {
 
 
 func main() {
+  err := rpio.Open()
   //определяем модель и версию платы
 //  getHW()
 
