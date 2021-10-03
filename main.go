@@ -11,7 +11,7 @@ import (
         "strconv"
         "regexp"
         "github.com/tkanos/gonfig"
-    //    "github.com/stianeikeland/go-rpio/v4"
+        "github.com/stianeikeland/go-rpio/v4"
 )
 
 type pc struct {
@@ -29,7 +29,7 @@ type pc struct {
 }
 var node pc = pc{}
 var cfgFile string = "gtemp.conf"
-//err := rpio.Open()
+err := rpio.Open()
 var pinStat bool = true
 
 
