@@ -1,4 +1,4 @@
-module example/gtemp
+module github.com/thefreejr/gtemp
 
 go 1.17
 
