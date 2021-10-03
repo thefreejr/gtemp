@@ -121,6 +121,7 @@ func getCPUTemp(path string) (t float64) {
 
 func main() {
   err := rpio.Open()
+  check(err)
   //определяем модель и версию платы
 //  getHW()
 
