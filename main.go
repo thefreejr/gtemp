@@ -30,7 +30,7 @@ type pc struct {
 var node pc = pc{}
 var cfgFile string = "gtemp.conf"
 
-var pinStat bool = true
+//var pinStat bool = true
 
 
 
@@ -106,13 +106,13 @@ func getCPUTemp(path string) (t float64) {
   return t
 }
   func  fanControll(n int , command bool) {
-    node.Fan_Enable = pinStat //         rpio.Pin(n).Read()
+    node.Fan_Enable = rpio.Pin(n).Read()
     if command && node.Fan_Enable {
-      //rpio.Pin(n).High()
+      rpio.Pin(n).High()
       log.Printf("Current CPU Temperature: %4.2f(%4.2f), fan is ON",node.Current_CPU_temp, node.Temp_Limit)
     }
     if !command && !node.Fan_Enable {
-      //rpio.Pin(n).Low()
+      rpio.Pin(n).Low()
       log.Printf("Current CPU Temperature: %4.2f(%4.2f), fan is OFF",node.Current_CPU_temp, node.Temp_Limit)
     }
   }
